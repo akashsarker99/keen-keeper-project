@@ -22,6 +22,10 @@ export const router = createBrowserRouter([{
             {
                 path: '/timeline',
                 Component: Timeline
+            },
+            {
+                path: '/friends/:id',
+                Component: Detailspage
             }
         ],
         errorElement: <ErrorPage></ErrorPage>
