@@ -12,7 +12,7 @@ const Cards = ({friend}) => {
               
                 <div className='flex gap-2'>
                     {
-                friend.tags.map(tag => <span className='bg-[#DBFCE7] px-3 rounded-full text-green-800'>{tag}</span>)
+                friend.tags.map(tag => <span className='bg-[#DBFCE7] text-sm px-3 rounded-full text-green-800'>{tag.toUpperCase()}</span>)
               }
                 </div>
 
@@ -21,7 +21,9 @@ const Cards = ({friend}) => {
                   ${friend.status ==="almost due" && "bg-[#EFAD44] px-3 rounded-full text-white"}
                   ${friend.status ==="on-track" && "bg-[#00531e] px-3 rounded-full text-white"}
                    `}>
-                   {friend.status}
+                  {friend.status === "overdue" && "Overdue"}
+                   {friend.status === "almost due" && "Almost Due"}
+                   {friend.status === "on-track" && "On Track"}
                   </span>
             </div>
             </Link>
