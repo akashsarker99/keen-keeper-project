@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useParams } from 'react-router';
 import UseData from '../../../hooks/UseData';
 import { PuffLoader } from 'react-spinners';
 import { BiPhoneCall } from 'react-icons/bi';
 import { MdOutlineTextsms, MdOutlineVideocam } from 'react-icons/md';
-import { IoVideocam } from 'react-icons/io5';
+import { FriendContext } from '../../shared/context/FriendContext';
 const Detailspage = () => {
    const {id} = useParams();
    const {friends, loading} = UseData();
+   const {handleCheckIn} = useContext(FriendContext);
    if(loading){
      return <div className='mt-3.5 flex justify-center'><PuffLoader /></div> 
    }
@@ -71,18 +72,18 @@ const Detailspage = () => {
                 <button className='btn'>Edit</button>
              </div>
 
-             <div className='bg-white shadow-md border border-gray-400 p-5 lg:col-span-3'>
+             <div className='bg-white shadow-md border border-gray-400 p-5 sm:col-span-2 lg:col-span-3'>
               <h2 className='font-semibold mb-3'>Quick Check-In</h2>
-                <div className='flex flex-col justify-center gap-4 md:flex-row'>
-                   <button className='btn md:btn-xl'>
+                <div className='flex flex-col justify-center gap-4 sm:flex-wrap lg:flex-row'>
+                   <button onClick={()=> handleCheckIn('call', findFriend)} className='btn md:btn-xl'>
                   <BiPhoneCall className='text-xl' />
                    <p className='font-bold'>Call</p>
                </button>
-               <button className='btn md:btn-xl'>
+               <button  onClick={()=> handleCheckIn('text', findFriend)} className='btn md:btn-xl'>
                   <MdOutlineTextsms className='text-xl' />
                    <p className='font-bold'>Text</p>
                </button>
-               <button className='btn md:btn-xl'>
+               <button onClick={()=> handleCheckIn('video', findFriend)} className='btn md:btn-xl'>
                   <MdOutlineVideocam className='text-xl' />
                    <p className='font-bold'>Video</p>
                </button>
