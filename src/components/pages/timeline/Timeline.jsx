@@ -9,7 +9,7 @@ const Timeline = () => {
            <h2 className='text-3xl font-bold'>Timeline</h2>
            <label className="select">
   <select onChange={(e)=> setSelect(e.target.value)}> 
-    <option value="">Filter Timeline</option>
+    <option className='text-[#64748B]'>Filter Timeline</option>
     <option>Call</option>
     <option>Text</option>
     <option>Video</option>
