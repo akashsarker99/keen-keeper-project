@@ -1,23 +1,27 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { FriendContext } from '../../shared/context/FriendContext';
 
 const Timeline = () => {
     const {timeline} = useContext(FriendContext);
-
-
+    const [select, setSelect] = useState('');
     return (
         <div className='w-10/12 mx-auto mt-10 space-y-2.5'>
            <h2 className='text-3xl font-bold'>Timeline</h2>
            <label className="select">
-  <span className="label">Type</span>
-  <select>
-    <option>Personal</option>
-    <option>Business</option>
+  <select onChange={(e)=> setSelect(e.target.value)}> 
+    <option value="">Filter Timeline</option>
+    <option>Call</option>
+    <option>Text</option>
+    <option>Video</option>
   </select>
 </label>
 
+
+
         {
-            timeline.map(card => ( <div key={card.id}>
+            timeline.length === 0 ? <h2 className='text-center text-[#64748B]'>No Data Available!</h2> :
+            timeline.filter(filtVal => filtVal.action === select.toLowerCase() || !select)
+            .map(card => ( <div key={card.id}>
             <div className='shadow border border-gray-300 py-4 flex gap-4 items-center pl-4'>
                 {card.action === 'call' && <img src="/call.png" alt="" />}
                 {card.action === 'text' && <img src="/text.png" alt="" />}

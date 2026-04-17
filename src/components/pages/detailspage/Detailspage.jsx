@@ -52,19 +52,19 @@ const Detailspage = () => {
             </div>
             <div className='right'>
                   <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5'>
-             <div className='bg-white text-center shadow-md border border-gray-400 py-7'>
+             <div className='bg-white text-center shadow-md border border-gray-400 py-7 rounded-xl'>
                 <h2 className='font-bold'>{findFriend.days_since_contact}</h2>
                 <p className='text-[#64748B]'>Days since contact</p>
              </div>
-             <div className='bg-white text-center shadow-md border border-gray-400 py-7'>
+             <div className='bg-white text-center shadow-md border border-gray-400 py-7 rounded-xl'>
                 <h2 className='font-bold'>{findFriend.goal}</h2>
                 <p className='text-[#64748B]'>Goal (Days)</p>
              </div>
-             <div className='bg-white text-center shadow-md border border-gray-400 py-7'>
+             <div className='bg-white text-center shadow-md border border-gray-400 py-7 rounded-xl'>
                 <h2 className='font-semibold'>{findFriend.next_due_date}</h2>
                 <p className='text-[#64748B]'>Next Due</p>
              </div>
-             <div className='bg-white shadow-md border border-gray-400 py-7 px-5 flex flex-col lg:flex-row gap-2 sm:justify-between lg:col-span-3'>
+             <div className='bg-white shadow-md border border-gray-400 py-7 px-5 flex flex-col lg:flex-row gap-2 sm:justify-between lg:col-span-3 rounded-xl'>
                 <div>
                   <h2 className='font-semibold'>Relationship Goal</h2>
                 <p className='text-[#64748B]'>Contact every <span className='font-bold text-black'>{findFriend.goal}  days</span></p>
@@ -72,7 +72,7 @@ const Detailspage = () => {
                 <button className='btn'>Edit</button>
              </div>
 
-             <div className='bg-white shadow-md border border-gray-400 p-5 sm:col-span-2 lg:col-span-3'>
+             <div className='bg-white shadow-md border border-gray-400 p-5 sm:col-span-2 lg:col-span-3 rounded-xl'>
               <h2 className='font-semibold mb-3'>Quick Check-In</h2>
                 <div className='flex flex-col justify-center gap-4 sm:flex-wrap lg:flex-row'>
                    <button onClick={()=> handleCheckIn('call', findFriend)} className='btn md:btn-xl'>
