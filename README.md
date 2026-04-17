@@ -17,12 +17,12 @@ Keen Keeper is a simple web app I built to help keep track of my relationships w
 ## Key Features
 
  **Interaction Tracking**
-  Log calls, messages, and video chats with friends to maintain consistent communication.
+1. Log calls, messages, and video chats with friends to maintain consistent communication.
 
- **Simple Analytics**
+ 2. Simple Analytics**
   Visualize users interaction patterns with dynamic charts using Recharts.
 
- **Contact Awareness**
+ 3. Contact Awareness
   It keeps track of how many days it’s been since user last contacted someone, helping user to stay consistent.
 
 
