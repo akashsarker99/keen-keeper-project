@@ -1,16 +1,33 @@
-# React + Vite
+# Keen Keeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About the Project
 
-Currently, two official plugins are available:
+Keen Keeper is a simple web app I built to help keep track of my relationships with friends. Sometimes life gets busy and it’s easy to lose touch, so this project makes it easier to stay connected. It lets me log interactions like calls, texts, and video chats, and shows useful insights about how often I’m keeping in touch.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Technologies I Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React.js
+* React Router
+* Tailwind CSS
+* Context API
+* Recharts
+* React Toastify
 
-## Expanding the ESLint configuration
+## Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+ **Interaction Tracking**
+  Log calls, messages, and video chats with friends to maintain consistent communication.
+
+ **Simple Analytics**
+  Visualize users interaction patterns with dynamic charts using Recharts.
+
+ **Contact Awareness**
+  It keeps track of how many days it’s been since user last contacted someone, helping user to stay consistent.
+
+
+## Live Demo
+
+https://keenkeeper-project1.netlify.app/
+
+

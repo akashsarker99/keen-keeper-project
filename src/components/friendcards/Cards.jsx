@@ -5,7 +5,7 @@ const Cards = ({friend}) => {
     return (
         <div>
             <Link to={`/friends/${friend.id}`}>
-             <div className='flex flex-col justify-center items-center space-y-1 border border-gray-400 py-6 rounded-xl shadow'>
+             <div className='flex flex-col justify-center items-center space-y-1 border border-gray-200 py-6 rounded-xl shadow transition-all ease-in-out duration-400 hover:-translate-y-2 hover:border-[#23d89c] hover:shadow-lg'>
              <img className='w-[60px] h-[60px] rounded-full' src={friend.picture} alt="" />
              <h2 className='font-bold'>{friend.name}</h2>
              <p className='text-[#64748B]'>{friend.days_since_contact}d ago</p>

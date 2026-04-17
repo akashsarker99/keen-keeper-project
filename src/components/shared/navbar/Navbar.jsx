@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoMdHome, IoMdTime } from 'react-icons/io';
 import { TfiStatsUp } from 'react-icons/tfi';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
   const links = <>
@@ -22,7 +22,7 @@ const Navbar = () => {
         {links}
       </ul>
     </div>
-     <h2 className="text-xl font-semibold"><span className='font-extrabold'>Keen</span>Keeper</h2>
+     <Link to='/'><h2 className="text-xl font-semibold"><span className='font-extrabold'>Keen</span>Keeper</h2></Link>
   </div>
   <div className="hidden lg:flex">
     <ul className="menu menu-horizontal px-1">

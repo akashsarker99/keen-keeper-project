@@ -9,9 +9,9 @@ const Homepage = () => {
     const {loading} = UseData();
     return (
         <div className='mt-10'>
-            <div className='bg-[#F8FAFC] text-center space-y-3'>
-                <h2 className='text-3xl font-bold'>Friends to keep close in your life</h2>
-                <p className='text-[#64748B]'>Your personal shelf of meaningful connections. Browse, tend, and nurture the
+            <div className=' text-center space-y-3 px-4 sm:px-0'>
+                <h2 className='text-2xl sm:text-3xl font-bold'>Friends to keep close in your life</h2>
+                <p className='text-[#64748B] text-sm sm:text-lg'>Your personal shelf of meaningful connections. Browse, tend, and nurture the
 relationships that matter most.</p>
 <button className='btn bg-[#244D3F] text-white'><FaPlus />Add a Friend</button>
             </div>

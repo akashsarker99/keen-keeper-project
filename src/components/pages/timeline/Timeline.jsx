@@ -7,9 +7,9 @@ const Timeline = () => {
     return (
         <div className='w-10/12 mx-auto mt-10 space-y-2.5'>
            <h2 className='text-3xl font-bold'>Timeline</h2>
-           <label className="select">
+           <label className="select mb-4">
   <select onChange={(e)=> setSelect(e.target.value)}> 
-    <option className='text-[#64748B]'>Filter Timeline</option>
+    <option value="" className='text-[#64748B]'>Filter Timeline</option>
     <option>Call</option>
     <option>Text</option>
     <option>Video</option>
@@ -22,7 +22,7 @@ const Timeline = () => {
             timeline.length === 0 ? <h2 className='text-center text-[#64748B]'>No Data Available!</h2> :
             timeline.filter(filtVal => filtVal.action === select.toLowerCase() || !select)
             .map(card => ( <div key={card.id}>
-            <div className='shadow border border-gray-300 py-4 flex gap-4 items-center pl-4'>
+            <div className='shadow border border-gray-300 py-4 flex gap-4 items-center pl-4 rounded-xl'>
                 {card.action === 'call' && <img src="/call.png" alt="" />}
                 {card.action === 'text' && <img src="/text.png" alt="" />}
                 {card.action === 'video' && <img src="/video.png" alt="" />}

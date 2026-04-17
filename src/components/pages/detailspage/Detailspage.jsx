@@ -40,7 +40,7 @@ const Detailspage = () => {
                 findFriend.tags.map(tag => <span className='bg-[#DBFCE7] text-sm px-3 rounded-full text-green-800'>{tag.toUpperCase()}</span>)
               }
                 </div>
-                <p className='text-xs text-center text-[#64748B]'>{findFriend.bio}</p>
+                <p className='text-xs text-center text-[#64748B] px-3'>{findFriend.bio}</p>
                 <p className='text-xs text-center text-[#64748B]'>Preferred: {findFriend.email}</p>
 
             </div>
